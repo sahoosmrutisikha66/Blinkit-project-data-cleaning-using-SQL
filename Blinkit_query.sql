@@ -25,11 +25,13 @@ select cast(sum(Total_Sales)/1000000 AS Decimal(10,2))  as Total_Sales_Million f
 # AVERAGE SALES:
 select cast(AVG(Total_Sales)as INT) as Avg_Total_Sales from BlinkIt_data
 
-
+# Total Sales in Million year wise:
 select cast(sum(Total_Sales)/1000000 AS Decimal(10,2))  as Total_Sales_Million from BlinkIt_data where Outlet_Establishment_Year = 2022
 
+# Avg Total Sales Year Wise:
 select cast(AVG(Total_Sales) as Decimal (10,1)) as Avg_Total_Sales from BlinkIt_data where Outlet_Establishment_Year = 2022
 
+# No of Item:
 select count(*) as No_of_Items from BlinkIt_data where Outlet_Establishment_Year = 2022
 
 # AVG RATING:
@@ -40,6 +42,7 @@ select Item_Fat_Content, cast(sum(Total_Sales) as DECIMAL(10,2)) AS Total_Sales
 from BlinkIt_data
 Group by Item_Fat_Content
 order by Total_Sales DESC
+
 
 select Item_Fat_Content, cast(sum(Total_Sales) as DECIMAL(10,2)) AS Total_Sales,
                          cast(AVG(Total_Sales) as Decimal (10,1)) as Avg_Total_Sales,
