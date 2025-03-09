@@ -43,7 +43,7 @@ from BlinkIt_data
 Group by Item_Fat_Content
 order by Total_Sales DESC
 
-
+# Total Item Fat Content:
 select Item_Fat_Content, cast(sum(Total_Sales) as DECIMAL(10,2)) AS Total_Sales,
                          cast(AVG(Total_Sales) as Decimal (10,1)) as Avg_Total_Sales,
 						 count(*) as No_of_Items
@@ -52,6 +52,7 @@ Group by Item_Fat_Content
 order by Total_Sales DESC
 
 
+# Year wise Item Fat Content:
 select Item_Fat_Content, cast(sum(Total_Sales) as DECIMAL(10,2)) AS Total_Sales,
                          cast(AVG(Total_Sales) as Decimal (10,1)) as Avg_Total_Sales,
 						 count(*) as No_of_Items
@@ -60,6 +61,7 @@ Group by Item_Fat_Content
 order by Total_Sales DESC
 
 
+# Total Sales in Thousand:
 select Item_Fat_Content, 
                     cast(sum(Total_Sales)/1000 as DECIMAL(10,2)) AS Total_Sales_Thousands,
                     cast(AVG(Total_Sales) as Decimal (10,1)) as Avg_Total_Sales,
@@ -77,6 +79,7 @@ select Item_Type,
 from BlinkIt_data 
 Group by Item_Type
 Order by Total_Sales DESC
+
 
 # Top 5 Item Sells:
 select TOP 5 Item_Type,
