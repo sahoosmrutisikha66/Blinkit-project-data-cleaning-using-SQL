@@ -4,6 +4,7 @@ select * from BlinkIt_data
 # NO OF ITEMS:
 select count(*) from BlinkIt_data
 
+# Update Query:
 UPDATE BlinkIt_data
 SET Item_Fat_Content = 
 CASE
@@ -12,6 +13,7 @@ WHEN Item_Fat_Content = 'reg' THEN 'Regular'
 ELSE Item_Fat_Content
 END
 
+# Distinct count:
 SELECT DISTINCT(Item_Fat_Content) from BlinkIt_data
 
 # TOTAL SALES:
